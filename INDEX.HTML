@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANDIJON FAST FOOD — Shahar markazidagi mazali taomlar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-burger"></i>
+        <span>ANDIJON <b>FASTFOOD</b></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Bosh sahifa</a>
+        <a href="#menu" class="nav-link">Menyu</a>
+        <a href="#promo" class="nav-link">Aksiyalar</a>
+        <a href="#contact" class="nav-link">Manzil va Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Taom qidirish..." />
+        </div>
+
+        <button class="btn-outline" id="openAuthBtn">
+          <i class="fa-regular fa-user"></i>
+          <span id="authBtnText">Kirish</span>
+        </button>
+
+        <button class="cart-btn" id="openCartBtn" aria-label="Savatcha">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menyu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-badge"><i class="fa-solid fa-location-dot"></i> Andijon shahar markazi</span>
+        <h1>Issiq, mazali va <span>30 daqiqada</span> eshigingizda!</h1>
+        <p>
+          Haqiqiy go‘shtli lavash, suvli burgerlar, qaynoq pitsa, hot-dog va donarlar.
+          Bobur shoh ko‘chasi va butun Andijon markazi bo‘ylab tezkor yetkazib berish!
+        </p>
+        <div class="hero-btns">
+          <a href="#menu" class="btn-primary">
+            <i class="fa-solid fa-fire"></i> Buyurtma berish
+          </a>
+          <button class="btn-secondary" id="heroPromoBtn">
+            <i class="fa-solid fa-gift"></i> Bugungi aksiya
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <h3>25-30</h3>
+            <span>Daqiqa yetkazish</span>
+          </div>
+          <div>
+            <h3>4.9 ★</h3>
+            <span>Mijozlar bahosi</span>
+          </div>
+          <div>
+            <h3>09:00–02:00</h3>
+            <span>Har kuni ochiq</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-img-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" alt="Andijon Max Burger" />
+          <div class="floating-tag">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>Xit taom!</strong>
+              <small>Andijon Double Burger</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO SECTION -->
+  <section class="promo-section" id="promo">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-text">
+          <span class="promo-pill">COMBO AKSIYA</span>
+          <h2>2 ta Katta Lavash + 1L Coca-Cola = <span>69 000 so‘m</span></h2>
+          <p>Faqat bugun Andijon shahar markazi bo‘ylab yetkazib berish mutlaqo BEPUL!</p>
+        </div>
+        <button class="btn-light" id="addComboBtn">
+          <i class="fa-solid fa-cart-plus"></i> Comboni savatga qo‘shish
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>Bizning <span>Menyu</span></h2>
+        <p>O‘zingiz yoqtirgan kategoriyani tanlang va bir zumda buyurtma bering</p>
+      </div>
+
+      <!-- KATEGORIYA TUGMALARI -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-category="all">🍽️ Barchasi</button>
+        <button class="tab-btn" data-category="hotdog">🌭 Hot-dog</button>
+        <button class="tab-btn" data-category="lavash">🌯 Lavash</button>
+        <button class="tab-btn" data-category="pizza">🍕 Pitsa</button>
+        <button class="tab-btn" data-category="burger">🍔 Burger</button>
+        <button class="tab-btn" data-category="donar">🥙 Donar</button>
+        <button class="tab-btn" data-category="gazli">🥤 Gazli ichimliklar</button>
+        <button class="tab-btn" data-category="gazsiz">🧃 Gazsiz ichimliklar</button>
+      </div>
+
+      <!-- MAHSULOTLAR RO'YXATI -->
+      <div class="menu-grid" id="menuGrid"></div>
+      <div class="empty-search hidden" id="emptySearch">
+        <i class="fa-solid fa-face-frown"></i>
+        <h3>Hech narsa topilmadi</h3>
+        <p>Boshqa nom bilan qidirib ko‘ring yoki kategoriyani o‘zgartiring.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANZIL VA ALOQA (ANDIJON MARKAZI) -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2>Bizning <span>Manzil</span></h2>
+        <p>Andijon shahri markazida joylashgan shinam zalimizga tashrif buyuring yoki onlayn buyurtma bering.</p>
+
+        <div class="info-list">
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Manzil:</h4>
+              <p>Andijon shahri, Bobur shoh ko‘chasi, 45-uy (Markaziy univermag yonida)</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <h4>Buyurtma telefoni:</h4>
+              <p>+998 (90) 123-45-67 | +998 (74) 223-45-67</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Ish vaqti:</h4>
+              <p>Dushanba – Yakshanba: 09:00 dan 02:00 gacha</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe
+          title="Andijon shahar markazi xaritasi"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=72.3320%2C40.7740%2C72.3580%2C40.7900&layer=mapnik&marker=40.7821%2C72.3442"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>ANDIJON <span>FASTFOOD</span></h3>
+        <p>Andijon shahar markazidagi №1 tezkor ovqatlanish tarmog‘i.</p>
+      </div>
+      <div class="socials">
+        <a href="#contact" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#contact" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <p class="copyright">© 2026 Andijon Fast Food. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <!-- SAVATCHA DRAWER (YON OYNA) -->
+  <div class="overlay hidden" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Savatchangiz</h3>
+      <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="drawer-footer">
+      <div class="total-row">
+        <span>Jami summa:</span>
+        <strong id="cartTotal">0 so‘m</strong>
+      </div>
+      <button class="btn-primary full-width" id="checkoutBtn">
+        Buyurtmani rasmiylashtirish <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- BUYURTMA BERISH (CHECKOUT) MODALI -->
+  <div class="modal hidden" id="checkoutModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Buyurtmani tasdiqlash</h3>
+        <button class="close-btn" id="closeCheckoutBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="checkoutForm" class="modal-form">
+        <div class="form-group">
+          <label>Ismingiz</label>
+          <input type="text" id="orderName" required placeholder="Masalan: Jasurbek" />
+        </div>
+        <div class="form-group">
+          <label>Telefon raqamingiz</label>
+          <input type="tel" id="orderPhone" required placeholder="+998 90 123 45 67" />
+        </div>
+        <div class="form-group">
+          <label>Andijon shahri ichidagi manzil</label>
+          <input type="text" id="orderAddress" required placeholder="Bobur shoh ko‘chasi, 12-uy, 4-xonadon" />
+        </div>
+        <div class="form-group">
+          <label>To‘lov turi</label>
+          <select id="orderPayment">
+            <option value="Naqd pul">💵 Naqd pul (kuryerga)</option>
+            <option value="Click">💳 Click orqali</option>
+            <option value="Payme">💳 Payme orqali</option>
+          </select>
+        </div>
+        <div class="checkout-summary">
+          To‘lanadigan summa: <strong id="checkoutTotalText">0 so‘m</strong>
+        </div>
+        <button type="submit" class="btn-primary full-width">
+          <i class="fa-solid fa-check"></i> Buyurtmani yuborish
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RO'YXATDAN O'TISH / KIRISH MODALI -->
+  <div class="modal hidden" id="authModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="authModalTitle">Tizimga kirish</h3>
+        <button class="close-btn" id="closeAuthBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" data-auth="login">Kirish</button>
+        <button type="button" class="auth-tab" data-auth="register">Ro‘yxatdan o‘tish</button>
+      </div>
+
+      <form id="authForm" class="modal-form">
+        <div class="form-group hidden" id="regNameGroup">
+          <label>To‘liq ismingiz</label>
+          <input type="text" id="authNameInput" placeholder="Ismingizni kiriting" />
+        </div>
+        <div class="form-group">
+          <label>Telefon raqam</label>
+          <input type="tel" id="authPhoneInput" required placeholder="+998 90 000 00 00" />
+        </div>
+        <div class="form-group">
+          <label>Parol</label>
+          <input type="password" id="authPassInput" required placeholder="Kamida 4 ta belgi" />
+        </div>
+        <button type="submit" class="btn-primary full-width" id="authSubmitBtn">Kirish</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST BILDIRISHNOMA -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
